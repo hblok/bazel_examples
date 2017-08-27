@@ -8,7 +8,8 @@ Contributions welcome!
 Follow Bazel installation instructions here:  
 https://docs.bazel.build/versions/master/install.html
 
-Then
+Then:  
+
     git clone https://github.com/hblok/bazel_examples.git
     cd bazel_examples
 
