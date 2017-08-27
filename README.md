@@ -4,12 +4,16 @@ Example Bazel BUILD files and code structures
 Contributions welcome!
 
 ## Installation
+
 Follow Bazel installation instructions here:  
 https://docs.bazel.build/versions/master/install.html
 
-## Some basic commands
+Then
     git clone https://github.com/hblok/bazel_examples.git
     cd bazel_examples
+
+
+## Some basic commands
 
     bazel query ...
 
