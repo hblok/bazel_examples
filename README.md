@@ -3,11 +3,11 @@ Example Bazel BUILD files and code structures
 
 Contributions welcome!
 
-# Installation
+## Installation
 Follow Bazel installation instructions here:  
 https://docs.bazel.build/versions/master/install.html
 
-# Some basic commands
+## Some basic commands
     git clone https://github.com/hblok/bazel_examples.git
     cd bazel_examples
 
