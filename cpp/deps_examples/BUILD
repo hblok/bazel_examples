@@ -15,14 +15,14 @@ cc_test(
 )
 
 # Local library option.
-cc_test(
-    name= "usr_lib_test",
-    srcs = ["multiply_test.cpp"],
-    deps = [
-        "@usr_lib_gtest//:gtest",
-    ],
-    size = "small",
-)
+#cc_test(
+#    name= "usr_lib_test",
+#    srcs = ["multiply_test.cpp"],
+#    deps = [
+#        "@usr_lib_gtest//:gtest",
+#    ],
+#    size = "small",
+#)
 
 # Not preferred.
 #
@@ -32,10 +32,10 @@ cc_test(
 #
 # See the other gtest examples above for better solutions.
 #
-cc_test(
-    name = "external_linkopts_test",
-    srcs = ["multiply_test.cpp"],
-    # Do not do this -- see above.
-    linkopts=["-lpthread", "-lgtest_main", "-lgtest" ],
-    size = "small",
-)
+#cc_test(
+#    name = "external_linkopts_test",
+#    srcs = ["multiply_test.cpp"],
+#    # Do not do this -- see above.
+#    linkopts=["-lpthread", "-lgtest_main", "-lgtest" ],
+#    size = "small",
+#)

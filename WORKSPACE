@@ -8,16 +8,16 @@ new_http_archive(
 )
 
 # Uses a local installation, and statically linked .a library files.
-new_local_repository(
-    name = "usr_lib_gtest",
-    path = "/usr/lib",
-    build_file_content = """
-cc_library(
-    name = "gtest",
-    srcs = ["libgtest.a", "libgtest_main.a"],
-    linkopts=["-lpthread"],
-    linkstatic = 1,
-    visibility = ["//visibility:public"],
-)""",
-
-)
+#new_local_repository(
+#    name = "usr_lib_gtest",
+#    path = "/usr/lib",
+#    build_file_content = """
+#cc_library(
+#    name = "gtest",
+#    srcs = ["libgtest.a", "libgtest_main.a"],
+#    linkopts=["-lpthread"],
+#    linkstatic = 1,
+#    visibility = ["//visibility:public"],
+#)""",
+#
+#)
