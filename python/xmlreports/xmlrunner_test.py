@@ -9,11 +9,7 @@ produces XML result output on the same xUnit format under
 import os
 import unittest
 
-# TODO: Avoid the dual package here. However, the problem seems to be the
-# internal unittest.py module of the xmlrunner project. It gets mixed up with
-# the offical python unittest package. Otherwise, we could have stripped the
-# xmlrunner path in the new_http_archive.
-from xmlrunner_github import xmlrunner
+import xmlrunner
 
 
 class TestXmlRunner(unittest.TestCase):
