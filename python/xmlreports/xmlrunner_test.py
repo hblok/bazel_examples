@@ -15,7 +15,7 @@ import xmlrunner
 class TestXmlRunner(unittest.TestCase):
 
   def test_hello(self):
-    print "Hello"
+    print("Hello")
     self.assertTrue(True)
 
 

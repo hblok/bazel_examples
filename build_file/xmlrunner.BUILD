@@ -40,6 +40,7 @@ OUTPUT_FILES = [
 py_library(
     name = "downloaded_xmlrunner",
     srcs = ORIGINAL_FILES,
+    srcs_version = "PY2AND3",
 )
 
 
