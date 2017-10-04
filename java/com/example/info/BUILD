@@ -1,7 +1,7 @@
 java_library(
     name = "info",
     srcs = ["InfoProvider.java"],
-    visibility = ["//javatest/com/example/info:__pkg__"]
+    visibility = ["//javatests/com/example/info:__pkg__"]
 )
 
 java_binary(
