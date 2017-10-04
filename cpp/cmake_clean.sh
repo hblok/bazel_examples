@@ -1,8 +1,13 @@
 #!/bin/bash
 
 function remove_cmake {
-  rm -rf Makefile CMakeFiles CTestTestfile.cmake cmake_install.cmake libInfo.a CMakeCache.txt info_provider*.bin Testing gtest
+  cd $1
+
+  rm -rf Makefile CMakeFiles CTestTestfile.cmake cmake_install.cmake libInfo.a CMakeCache.txt info_provider*.bin hello*.bin Testing gtest
+
+  cd -
 }
 
-remove_cmake
-cd info; remove_cmake
+remove_cmake .
+remove_cmake hello
+remove_cmake info

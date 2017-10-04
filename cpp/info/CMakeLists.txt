@@ -10,7 +10,11 @@ add_executable(info_provider.bin
 
 
 enable_testing()
-add_subdirectory(/usr/src/gtest ${CMAKE_CURRENT_BINARY_DIR}/gtest)
+if (NOT GTEST_ADD)
+  message(">> In Info")
+  add_subdirectory(/usr/src/gtest ${CMAKE_CURRENT_BINARY_DIR}/gtest)
+  set(GTEST_ADD 1 PARENT_SCOPE)
+endif()
 
 add_executable(info_provider_test.bin
   info_provider_test.cpp
