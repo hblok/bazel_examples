@@ -3,6 +3,6 @@ py_test(
     srcs = ["xmlrunner_test.py"],
     srcs_version = "PY2AND3",
     deps = [
-        "@xmlrunner"
+        "@github_xmlrunner"
     ]
 )

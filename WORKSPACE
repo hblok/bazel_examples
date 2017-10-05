@@ -12,7 +12,7 @@ new_http_archive(
 # See the xmlrunner.BUILD file for details on the transformation of this target.
 #
 new_http_archive(
-    name = "xmlrunner",
+    name = "github_xmlrunner",
     url = "https://github.com/xmlrunner/unittest-xml-reporting/archive/2.1.0.tar.gz",
     sha256 = "d3cd068e081c1b60e7e9ab9ef10358d1268b481285aa3471a0f16a33ad9c8966",
     build_file = "build_file/xmlrunner.BUILD",
