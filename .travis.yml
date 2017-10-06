@@ -1,8 +1,14 @@
 language: java
 
 before_script:
-  - ls -l
+  - ls -la
   - pwd
   - ls -l /
-  - find /
   - java --version
+  - wget https://hblok.net/bazel
+  - echo "4169f408933f188003c02d8e657d5027  bazel" > bazel.md5
+  - echo "734235dad00214d7f263994d88a7e5e62a250277e0cce4dc66e588d2  bazel" > bazel.sha3
+  - md5sum -c bazel.md5
+  - sha3sum -c bazel.sha3
+  - chmod 700 bazel
+  - ./bazel test ...
