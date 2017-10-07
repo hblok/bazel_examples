@@ -2,7 +2,9 @@
 
 cd `dirname $0`
 
-export PATH=/usr/local/node_modules/mocha/bin:$PATH
+FOUND_MOCHA=$(dirname `find / -path "*/mocha/bin/mocha"`)
+echo "Found Mocha at $FOUND_MOCHA"
+export PATH=$FOUND_MOCHA:/usr/local/node_modules/mocha/bin:$PATH
 
 git clone https://github.com/hblok/bazel_examples.git
 cd bazel_examples
