@@ -20,15 +20,10 @@ addons:
       - nodejs
 
 before_script:
-  - pwd
-  - ls -la
-  - java -version
   - cd /usr/local
   - sudo npm install mocha
-  - ls -l
-  - find . -path "*mocha/bin"
+  - find . -path "*mocha/bin/mocha"
   - cd -
-  - ls -l
 
 cache:
   directories:
@@ -38,4 +33,3 @@ jobs:
   include:
     - stage: bazel test
       script: PATH=/usr/local/node_modules/mocha/bin:$PATH  bazel test --force_python py3 --python_path /usr/bin/python3 --test_output=errors --verbose_failures  ...
-      script: ls -la $HOME
