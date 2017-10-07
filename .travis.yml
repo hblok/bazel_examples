@@ -25,6 +25,7 @@ before_script:
   - java -version
   - cd /usr/local
   - sudo npm install mocha
+  - cd -
   - ls -l
 
 
