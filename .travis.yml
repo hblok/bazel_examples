@@ -25,10 +25,11 @@ before_script:
   - java -version
   - cd /usr/local
   - sudo npm install mocha
+  - ls -l
 
 
--jobs:
+jobs:
   include:
-    - stage: test
+    - stage: bazel test
       script: tools/docker/test_all.sh
  
