@@ -30,9 +30,12 @@ before_script:
   - cd -
   - ls -l
 
+cache:
+  directories:
+    - $HOME/.cache/bazel
 
 jobs:
   include:
     - stage: bazel test
-      script: tools/docker/test_all.sh
- 
+      script: PATH=/usr/local/node_modules/mocha/bin:$PATH  bazel test --force_python py3 --python_path /usr/bin/python3 --test_output=errors --verbose_failures  ...
+      script: ls -la $HOME
