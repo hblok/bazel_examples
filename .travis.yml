@@ -23,7 +23,8 @@ before_script:
   - pwd
   - ls -la
   - java -version
-  - sudo "cd /usr/local; npm install mocha"
+  - cd /usr/local
+  - sudo npm install mocha
 
 
 -jobs:
