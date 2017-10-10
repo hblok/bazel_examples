@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package phonebook;
+
+// Always import protos with a full path relative to the WORKSPACE file.
+import "protobuf/phonebook/address.proto";
+
+// Arena Allocation enabled for the Person proto.
+// See documentation at
+// https://developers.google.com/protocol-buffers/docs/reference/arenas
+option cc_enable_arenas = true;
+
+message Person {
+  string firstname = 1;
+  string lastname = 2;
+  int32 id = 3;
+  string email = 4;
+  Address address = 5;
+}

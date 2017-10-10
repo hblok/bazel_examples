@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package phonebook;
+
+message ZipCode {
+  string code = 1;
+}
