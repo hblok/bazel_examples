@@ -5,6 +5,7 @@ Currently includes examples for
   - [C++](cpp)
   - [Java](java)
   - [Python](python)
+  - [Protocol Buffers (aka protobuf)](protobuf/phonebook)
   - [JavaScript Mocha tests](js/mocha)
   
   - [mocha_test - a custom target macro](js/mocha/mocha_test.bzl)
