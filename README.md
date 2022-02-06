@@ -12,7 +12,8 @@ Currently includes examples for
   
   - [Ubuntu 14.04 based Docker image with bazel installation and test run](tools/docker/trusty)
   - [Travis CI test run](.travis.yml)  
-  - Travis result: [![Build Status](https://travis-ci.org/hblok/bazel_examples.svg?branch=master)](https://travis-ci.org/hblok/bazel_examples)
+  - Tests result: ![test result](https://github.com/hblok/bazel_examples/actions/workflows/main.yml/badge.svg)
+
 
 Contributions welcome!
 
