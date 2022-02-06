@@ -9,9 +9,11 @@ Currently includes examples for
   - [JavaScript Mocha tests](js/mocha)
   
   - [mocha_test - a custom target macro](js/mocha/mocha_test.bzl)
-  
-  - [Ubuntu 14.04 based Docker image with bazel installation and test run](tools/docker/trusty)
-  - [Travis CI test run](.travis.yml)  
+
+  - [GitHub Actions Workflow](.github/workflows/main.yml)
+  - [Ubuntu 20.04 based Docker image with bazel installation and test run](tools/docker/ubuntu_20.04)
+  - [Travis CI test run example](.travis.yml) (Deprecated)
+
   - Tests result: ![test result](https://github.com/hblok/bazel_examples/actions/workflows/main.yml/badge.svg)
 
 
