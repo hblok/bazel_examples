@@ -15,11 +15,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - uses: bazelbuild/setup-bazelisk@v1
+      
+      - name: Mount bazel cache
+        uses: actions/cache@v2
+        with:
+          path: "~/.cache/bazel"
+          key: bazel
         
       - name: List
         run: ls ${{ github.workspace }}
 
+      - run: bazel build //..
 
