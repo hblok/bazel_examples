@@ -30,6 +30,7 @@ jobs:
         run: |
             ls ${{ github.workspace }}
             cat /etc/issue
+            find /usr/local -path "*mocha/bin/mocha"
 
-      - run: bazel test ...
+      - run: bazel test --test_output all ...
 
