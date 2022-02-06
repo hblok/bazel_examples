@@ -96,6 +96,9 @@ http_archive(
     sha256 = "aabe421c26836c520256cafaee0fca2ba7b02759c60ef1174a96a531c2d75f75",
 )
 
+#load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+#protobuf_deps()
+
 # cc_proto_library rules implicitly depend on @com_google_protobuf_cc//:cc_toolchain,
 # which is the C++ proto runtime (base classes and common utilities).
 http_archive(
