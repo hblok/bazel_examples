@@ -25,5 +25,10 @@ RUN \
     export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y mocha nodejs
 
+# More
+RUN \
+    export DEBIAN_FRONTEND=noninteractive && \
+    apt-get install -y python3-dev
+
 # Our environment
 COPY bazel_examples_test.sh /build/bazel_examples_test.sh

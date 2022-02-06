@@ -6,6 +6,7 @@ Currently includes examples for
   - [Java](java)
   - [Python](python)
   - [Protocol Buffers (aka protobuf)](protobuf/phonebook)
+  - [Python with Protobuf + GRPC](python/helloworld_grpc)
   - [JavaScript Mocha tests](js/mocha)
   
   - [mocha_test - a custom target macro](js/mocha/mocha_test.bzl)
