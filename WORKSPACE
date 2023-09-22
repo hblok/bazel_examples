@@ -1,6 +1,6 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-skylib_version = "1.0.2"
+skylib_version = "1.4.2"
 
 http_archive(
     name = "bazel_skylib",
@@ -11,17 +11,17 @@ http_archive(
     ],
 )
 
-load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
-bazel_skylib_workspace()
+#load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+#bazel_skylib_workspace()
 
 
 # Downloads the source and compiles.
 http_archive(
     name = "gtest",
-    url = "https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip",
-    sha256 = "353571c2440176ded91c2de6d6cd88ddd41401d14692ec1f99e35d013feda55a",
+    url = "https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip",
+    sha256 = "1f357c27ca988c3f7c6b4bf68a9395005ac6761f034046e9dde0896e3aba00e4",
     build_file = "@//build_file:gtest.BUILD",
-    strip_prefix = "googletest-release-1.11.0",
+    strip_prefix = "googletest-1.14.0",
 )
 
 
@@ -124,11 +124,12 @@ http_archive(
 )
 
 
-rules_python_version = "0.6.0"
+rules_python_version = "0.25.0"
 
 http_archive(
     name = "rules_python",
     url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/{}.zip".format(rules_python_version),    
     strip_prefix = "rules_python-{}".format(rules_python_version),
-    sha256 = "8911e8a96ad591afded29c90c1ce4341c988f8e41b1a469c7fb593bd6025e193",
+    sha256 = "9ffcbf19b197153d7ceafb126eb05b7b5ce847aa4e1745f03feed298b4940e2c",
 )
+
