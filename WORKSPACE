@@ -1,12 +1,9 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-<<<<<<< HEAD
 skylib_version = "1.4.2"
 
-=======
 # Bazel Skylib: Common useful functions and rules for Bazel
 skylib_version = "1.0.2"
->>>>>>> c3453f9c983da42f9c962b8063c6767ecc5f7394
 http_archive(
     name = "bazel_skylib",
     sha256 = "97e70364e9249702246c0e9444bccdc4b847bed1eb03c5a3ece4f83dfe6abc44",
@@ -15,31 +12,21 @@ http_archive(
             .format(skylib_version, skylib_version),
     ],
 )
-<<<<<<< HEAD
 
 #load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
 #bazel_skylib_workspace()
-=======
-load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
-bazel_skylib_workspace()
->>>>>>> c3453f9c983da42f9c962b8063c6767ecc5f7394
 
 
 # Google Test - Unit test framework for C++
-gtest_version = "1.11.0"
+
+gtest_version = "1.14.0"
+
 http_archive(
     name = "gtest",
-<<<<<<< HEAD
-    url = "https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip",
+    url = "https://github.com/google/googletest/archive/refs/tags/v%s.zip" % gtest_version,
     sha256 = "1f357c27ca988c3f7c6b4bf68a9395005ac6761f034046e9dde0896e3aba00e4",
     build_file = "@//build_file:gtest.BUILD",
-    strip_prefix = "googletest-1.14.0",
-=======
-    url = "https://github.com/google/googletest/archive/refs/tags/release-%s.zip" % gtest_version,
-    sha256 = "353571c2440176ded91c2de6d6cd88ddd41401d14692ec1f99e35d013feda55a",
-    build_file = "@//build_file:gtest.BUILD",
-    strip_prefix = "googletest-release-%s" % gtest_version,
->>>>>>> c3453f9c983da42f9c962b8063c6767ecc5f7394
+    strip_prefix = "googletest-%s" % gtest_version,
 )
 
 
@@ -108,9 +95,9 @@ rules_jvm_external_deps()
 # which is the proto-compiler.
 # This statement defines the @com_google_protobuf repo.
 
-protobuf_version = "3.19.4"
-protobuf_url = "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.4/protobuf-all-%s.zip" % protobuf_version
-protobuf_sha256_sum = "aabe421c26836c520256cafaee0fca2ba7b02759c60ef1174a96a531c2d75f75"
+protobuf_version = "24.3"
+protobuf_url = "https://github.com/protocolbuffers/protobuf/releases/download/v%s/protobuf-%s.zip" % (protobuf_version, protobuf_version)
+protobuf_sha256_sum = "d6aac727167e7a91e407d482ab541c124cc7e101914ae37754b15b0e6d8d8546"
 
 http_archive(
     name = "com_google_protobuf",
@@ -150,18 +137,16 @@ http_archive(
 )
 
 
-<<<<<<< HEAD
-rules_python_version = "0.25.0"
-=======
 # Google GRPC
-grpc_version = "1.43.2"
+
+grpc_version = "1.58.1"
+
 http_archive(
     name = "com_github_grpc_grpc",
     url = "https://github.com/grpc/grpc/archive/refs/tags/v%s.zip" % grpc_version,
     strip_prefix = "grpc-%s" % grpc_version,
-    sha256 = "d6827949d9a32d205c802a3338196f161c0c058416a0248bd50a13a8e124b53c",
+    sha256 = "7fa38089fd87e83ed17287276b0f0fda49099a8907df2131b89999ad774bfe33",
 )
->>>>>>> c3453f9c983da42f9c962b8063c6767ecc5f7394
 
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 grpc_deps()
@@ -170,11 +155,12 @@ grpc_extra_deps()
 
 
 # rules_python
-rules_python_version = "0.6.0"
+
+rules_python_version = "0.25.0"
+
 http_archive(
     name = "rules_python",
     url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/{}.zip".format(rules_python_version),    
     strip_prefix = "rules_python-{}".format(rules_python_version),
     sha256 = "9ffcbf19b197153d7ceafb126eb05b7b5ce847aa4e1745f03feed298b4940e2c",
 )
-
