@@ -24,3 +24,10 @@ py_test(
     srcs_version = "PY2AND3",
     size = "small",
 )
+
+py_test(
+    name = "person_test",
+    srcs = ["person_test.py"],
+    deps = ["//protobuf/phonebook:person_py_proto"],
+    size = "small",
+)

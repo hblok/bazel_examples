@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=/usr/bin:$PATH
+
 which mocha > /dev/null || (echo "\nERROR: ** Mocha installation required. (apt install mocha)\n"; exit 1)
 
 NODE_PATH=.

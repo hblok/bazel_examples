@@ -6,13 +6,17 @@ Currently includes examples for
   - [Java](java)
   - [Python](python)
   - [Protocol Buffers (aka protobuf)](protobuf/phonebook)
+  - [Python with Protobuf + GRPC](python/helloworld_grpc)
   - [JavaScript Mocha tests](js/mocha)
   
   - [mocha_test - a custom target macro](js/mocha/mocha_test.bzl)
-  
-  - [Ubuntu 14.04 based Docker image with bazel installation and test run](tools/docker/trusty)
-  - [Travis CI test run](.travis.yml)  
-  - Travis result: [![Build Status](https://travis-ci.org/hblok/bazel_examples.svg?branch=master)](https://travis-ci.org/hblok/bazel_examples)
+
+  - [GitHub Actions Workflow](.github/workflows/main.yml)
+  - [Ubuntu 20.04 based Docker image with bazel installation and test run](tools/docker/ubuntu_20.04)
+  - [Travis CI test run example](.travis.yml) (Deprecated)
+
+  - Tests result: ![test result](https://github.com/hblok/bazel_examples/actions/workflows/main.yml/badge.svg)
+
 
 Contributions welcome!
 
