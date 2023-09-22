@@ -2,6 +2,7 @@ cc_library(
     name = "info_provider",
     srcs = ["info_provider.cpp"],
     hdrs = ["info_provider.h"],
+    copts = ["-std=c++17"],
 )
 
 cc_binary(
