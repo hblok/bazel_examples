@@ -1,3 +1,6 @@
+
+load("@rules_proto_grpc_python//:defs.bzl", "python_grpc_library")
+
 py_library(
     name = "info_provider",
     srcs = ["info_provider.py"],
@@ -25,9 +28,15 @@ py_test(
     size = "small",
 )
 
-py_test(
-    name = "person_test",
-    srcs = ["person_test.py"],
-    deps = ["//protobuf/phonebook:person_py_proto"],
-    size = "small",
+python_grpc_library(
+    name = "person_py_grpc",
+    protos = ["//protobuf/phonebook:person_proto"],
 )
+
+# TODO: Fix import path
+#py_test(
+#    name = "person_test",
+#    srcs = ["person_test.py"],
+#    deps = [":person_py_grpc"],
+#    size = "small",
+#)

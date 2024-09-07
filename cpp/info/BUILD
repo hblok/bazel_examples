@@ -15,7 +15,7 @@ cc_test(
     srcs = ["info_provider_test.cpp"],
     deps = [
         ":info_provider",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
     size = "small",
 )

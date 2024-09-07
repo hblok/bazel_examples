@@ -9,7 +9,7 @@ cc_test(
     srcs = ["hello_test.cpp"],
     deps = [
         ":hello",
-        "@gtest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
     size = "small",
 )

@@ -9,7 +9,7 @@ cc_test(
     name= "http_archive_test",
     srcs = ["multiply_test.cpp"],
     deps = [
-        "@gtest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
     size = "small",
 )

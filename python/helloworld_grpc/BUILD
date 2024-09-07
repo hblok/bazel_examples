@@ -3,7 +3,7 @@ py_binary(
     name = "server",
     srcs = ["server.py"],
     deps = [
-        "//grpc_def/helloworld:helloworld_py_pb2",
+#        "//grpc_def/helloworld:helloworld_py_pb2",
         "//grpc_def/helloworld:helloworld_py_pb2_grpc",
     ],
 )
@@ -12,7 +12,7 @@ py_binary(
     name = "client",
     srcs = ["client.py"],
     deps = [
-        "//grpc_def/helloworld:helloworld_py_pb2",
+#        "//grpc_def/helloworld:helloworld_py_pb2",
         "//grpc_def/helloworld:helloworld_py_pb2_grpc",
     ],
 )
