@@ -2,6 +2,7 @@ cc_library(
     name = "hello",
     srcs = ["hello.cpp"],
     hdrs = ["hello.h"],
+    copts = ["-std=c++17"],
 )
 
 cc_test(
