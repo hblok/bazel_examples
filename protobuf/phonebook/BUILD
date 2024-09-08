@@ -8,10 +8,6 @@
 
 package(default_visibility = ["//visibility:public"])
 
-#load("@com_google_protobuf//:protobuf.bzl", "py_proto_library")
-
-#load("@rules_proto_grpc_python//:defs.bzl", "python_grpc_library")
-
 # Convention:
 # A java_proto_library that wraps a proto_library named foo_proto
 # should be called foo_java_proto.
@@ -39,20 +35,6 @@ cc_proto_library(
     name = "person_cc_proto",
     deps = [":person_proto"],
 )
-
-# A py_proto_library, from "@com_google_protobuf//:protobuf.bzl" (see above),
-# that compiles the specified .proto files and exports a library which can be
-# used by other py targets.
-# Note that, this library will work with Protobuf Well Known Types, or GRPC.
-# For examples of those, see the directory "grpc" in this repo instead.
-#py_proto_library(
-#    name = "person_py_proto",
-#    srcs = [
-#    	 "person.proto",
-#	 "address.proto",
-#	 "zip_code.proto"
-#    ]
-#)
 
 # Conventions:
 # 1. One proto_library rule per .proto file.

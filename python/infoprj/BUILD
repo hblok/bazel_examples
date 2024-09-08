@@ -30,13 +30,16 @@ py_test(
 
 python_grpc_library(
     name = "person_py_grpc",
-    protos = ["//protobuf/phonebook:person_proto"],
+    protos = [
+      "//protobuf/phonebook:person_proto",
+      "//protobuf/phonebook:address_proto",
+      "//protobuf/phonebook:zip_code_proto",
+    ],
 )
 
-# TODO: Fix import path
-#py_test(
-#    name = "person_test",
-#    srcs = ["person_test.py"],
-#    deps = [":person_py_grpc"],
-#    size = "small",
-#)
+py_test(
+    name = "person_test",
+    srcs = ["person_test.py"],
+    deps = [":person_py_grpc"],
+    size = "small",
+)
