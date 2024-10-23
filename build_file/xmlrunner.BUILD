@@ -15,5 +15,4 @@ package(default_visibility = ["//visibility:public"])
 py_library(
     name = "github_xmlrunner",
     srcs = glob(["xmlrunner/**/*.py"]),
-    srcs_version = "PY2AND3",
 )
