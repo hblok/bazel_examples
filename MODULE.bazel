@@ -1,6 +1,8 @@
 ### bazel_examples ###
 ######################
 
+## Bazel Central Registry
+
 bazel_dep(name = "protobuf", version = "28.0-rc2")
 bazel_dep(name = "grpc", version = "1.66.0.bcr.1")
 bazel_dep(name = "rules_proto_grpc", version = "5.0.0")
@@ -15,10 +17,12 @@ bazel_dep(name = "googletest", version = "1.15.2")
 bazel_dep(name = "rules_jvm_external", version = "6.2")
 
 
+## Use external rule
+
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 
-# xmlrunner (Python)
+## xmlrunner (Python) - Custom download of tar-ball, plus custom BUILD file
 
 # Python unittest XML xUnit test result output format
 # See the xmlrunner.BUILD file for details on the transformation of this target.
@@ -32,7 +36,19 @@ http_archive(
 )
 
 
-## Maven (Java)
+## Pip for Python
+
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+    download_only = True,
+    hub_name = "pypi",
+    python_version = "3.11",
+    requirements_lock = "//:requirements_lock.txt",
+)
+use_repo(pip, "pypi")
+
+
+## Maven dependencies for Java
 
 maven_ext = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven_ext.install(
@@ -49,10 +65,8 @@ use_repo(maven_ext, "maven2")
 # have already taken the "maven" string.
 
 
-
 # TODO:
 # - tar/jar
-# - pip
 # - docker
 # - aspect?
 # - 

@@ -6,6 +6,7 @@ Currently includes examples for
   - [Java](java)
   - [Maven dependencies for Java](com/example/apache_collections)
   - [Python](python)
+  - [Pip dependencies for Python](python/pip/BUILD)
   - [Protocol Buffers (aka protobuf)](protobuf/phonebook)
   - [Python with Protobuf + GRPC](python/helloworld_grpc)
   - [JavaScript Mocha tests](js/mocha)
@@ -14,7 +15,6 @@ Currently includes examples for
 
   - [GitHub Actions Workflow](.github/workflows/main.yml)
   - [Ubuntu 20.04 based Docker image with bazel installation and test run](tools/docker/ubuntu_20.04)
-  - [Travis CI test run example](.travis.yml) (Deprecated)
 
   - Tests result: ![test result](https://github.com/hblok/bazel_examples/actions/workflows/main.yml/badge.svg)
 
