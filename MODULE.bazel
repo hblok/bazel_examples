@@ -1,17 +1,24 @@
+### bazel_examples ###
+######################
 
 bazel_dep(name = "protobuf", version = "28.0-rc2")
 bazel_dep(name = "grpc", version = "1.66.0.bcr.1")
 bazel_dep(name = "rules_proto_grpc", version = "5.0.0")
+
+bazel_dep(name = "grpc-java", version = "1.67.1")
 
 bazel_dep(name = "rules_python", version = "0.35.0")
 bazel_dep(name = "rules_proto_grpc_python", version = "5.0.0")
 
 bazel_dep(name = "googletest", version = "1.15.2")
 
+bazel_dep(name = "rules_jvm_external", version = "6.2")
 
-# xmlrunner
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+
+# xmlrunner (Python)
 
 # Python unittest XML xUnit test result output format
 # See the xmlrunner.BUILD file for details on the transformation of this target.
@@ -24,3 +31,28 @@ http_archive(
     strip_prefix = "unittest-xml-reporting-%s" % xmlrunner_version,
 )
 
+
+## Maven (Java)
+
+maven_ext = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+maven_ext.install(
+    name = "maven2",
+    artifacts = [
+        "org.apache.commons:commons-collections4:4.4",
+    ],
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ],
+)
+use_repo(maven_ext, "maven2")
+# Notice the "maven2" name, to avoid conflicts with other rules which might
+# have already taken the "maven" string.
+
+
+
+# TODO:
+# - tar/jar
+# - pip
+# - docker
+# - aspect?
+# - 

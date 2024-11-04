@@ -4,6 +4,7 @@ Example Bazel use cases and BUILD files in different languages.
 Currently includes examples for
   - [C++](cpp)
   - [Java](java)
+  - [Maven dependencies for Java](com/example/apache_collections)
   - [Python](python)
   - [Protocol Buffers (aka protobuf)](protobuf/phonebook)
   - [Python with Protobuf + GRPC](python/helloworld_grpc)
