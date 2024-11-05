@@ -54,3 +54,13 @@ For some parts, other build systems structures are also included, to study the d
 
   - [CMake / CTest](https://github.com/hblok/bazel_examples/search?q=ctest)
 
+
+## More examples
+
+For even more Bazel examples, see some of my other Github projects:
+
+- [Remember Java](https://rememberjava.com/) - Java examples, compiled and tested with Bazel.
+- [GRPC-Web example](https://github.com/hblok/grpc-web-bazel-ts-example) - An end-to-end example of using Bazel to connect gRPC Java server, Envoy proxy, and gRPC from the browser.
+- [Cloud Tycoon](https://github.com/hblok/cloud_tycoon) - A full-stack web to cloud, web-grpc to Java distributed game.
+
+
